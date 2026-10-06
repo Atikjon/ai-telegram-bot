@@ -9,8 +9,10 @@ from telegram.ext import (
 from google import genai
 import asyncio
 
-BOT_TOKEN = "BU_YERGA_TELEGRAM_TOKEN"
-GEMINI_API_KEY = "BU_YERGA_GEMINI_API_KEY"
+import os
+
+BOT_TOKEN = os.environ["BOT_TOKEN"]
+GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 
 client = genai.Client(api_key=GEMINI_API_KEY)
 
